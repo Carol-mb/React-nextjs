@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //duplicar numeros 
+         const numeros = [1,2,3,4,5];
+         const numerosDuplicados = numero.map(numero=>numero*2);
+         console.log(numerosDuplicados);
+
+         //Exemplo 2: Extrair propriedade de um objeto
+         const pessoas = [
+            {nome:"Carol", idade:22},
+            {nome:"Caroline", idade:23},
+            {nome:"Karol", idade:24}
+         ]
+         const nomePessoas = pessoas.map(pessoa =>pessoa.nome);
+         console.log(nomePessoas);
+
+         //Exemplo 3: Alterar objeto no vetor
+         const tarefas = [
+            {id: 1, titulo: "Programação", concluido:false},
+            {id: 2, titulo: "Math", concluido:false},
+    ];
+
+        const tarefasConcluidas = tarefas.map(tarefa => {
+            return {... tarefa, concluido:true} //... traz toda informação dentro de tarefas concluidas.
+        })
+        console.log(tarefas);
+
+        //Exemplo 4: Alterar pelo id
+        const tasks = [
+            {id: 1, titulo: "Programação", concluido:false},
+            {id: 2, titulo: "Math", concluido:false},
+    ];
+
+        const tasksF = tarefas.map(tarefa => {
+            if(tarefa.id === 1){
+                return{...tarefas, concluido:true}
+            }
+            return tarefa //mantem as outras tarefas inalteradas
+        });
+        console.log(tasksF);
+
+    </script>
+</body>
+</html>
